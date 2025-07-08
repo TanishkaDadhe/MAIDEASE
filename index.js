@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
+require('dotenv').config();
 const flash = require('connect-flash');
 const nodemailer = require('nodemailer');
-require('dotenv').config();
 
 const port = process.env.PORT;
 
@@ -29,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 const mysql = require('mysql2');
 const connection = mysql.createConnection({
   host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
   user: process.env.DB_USER,
   password: process.env.DB_PASS,
   database: process.env.DB_NAME
