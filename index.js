@@ -4,7 +4,7 @@ require('dotenv').config();
 const flash = require('connect-flash');
 const nodemailer = require('nodemailer');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 const session = require("express-session");
 
